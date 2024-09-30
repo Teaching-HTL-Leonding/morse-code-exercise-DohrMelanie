@@ -10,11 +10,12 @@ import { EncodeDecodeService } from '../encode-decode.service';
   styleUrl: './decode.component.css'
 })
 export class DecodeComponent {
-  readonly inputCode = signal("")
-  readonly outputText = signal("")
+  readonly inputCode = signal("");
+  readonly outputText = signal("");
   decodeService = inject(EncodeDecodeService);
 
   decode() {
-    this.outputText.set(this.decodeService.decode(this.inputCode()))
+    console.log("Decoding");
+    this.outputText.set(this.decodeService.decode(this.inputCode()));
   }
 }

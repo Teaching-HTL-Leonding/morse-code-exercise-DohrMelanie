@@ -37,17 +37,18 @@ export class EncodeDecodeService {
   constructor() { }
   encode(inputText: string): string {
     let outputCode: string = "";
-    if (!inputText || inputText.trim.length === 0) {
+    inputText = inputText.trim();
+    if (!inputText || inputText.length === 0) {
       return "";
     }
     for (let i = 0; i < inputText.length; i++) {
       let char = inputText.charAt(i);
       if (char === ' ') {
+        outputCode += ' / ';
         continue;
-      }
-      if (char >= 'A' && char <= 'Z') {
+      } else {
         let index = char.charCodeAt(0) - 'A'.charCodeAt(0);
-        outputCode += this.morseCode[index];
+        outputCode += this.morseCode[index] + " ";
       }
     }
     return outputCode;

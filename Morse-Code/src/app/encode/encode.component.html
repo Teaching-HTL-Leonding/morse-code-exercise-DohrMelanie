@@ -1,6 +1,6 @@
 <h2>Encode</h2>
 
 <input type="text" [(ngModel)]="inputText" (keyup)="encode()" placeholder="Enter Text" />
-
+<button (click)="encode()" [disabled]="!shouldEncode()">Encode</button>
 
 <p>{{outputCode()}}</p>
