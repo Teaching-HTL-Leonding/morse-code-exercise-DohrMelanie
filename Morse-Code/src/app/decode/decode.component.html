@@ -1,1 +1,6 @@
-<p>decode works!</p>
+<h2>Decode</h2>
+
+<input type="text" [(ngModel)]="inputCode" (keyup)="decode()" placeholder="Enter Morse Code" />
+
+
+<p>{{outputText()}}</p>
