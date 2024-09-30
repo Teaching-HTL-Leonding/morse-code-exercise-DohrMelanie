@@ -4,6 +4,6 @@ import { EncodeComponent} from './encode/encode.component';
 
 export const routes: Routes = [
   {"path": "decode", "component": DecodeComponent},
-  {"path": "", "redirectTo": "/decode", "pathMatch": "full"},
-  {"path": "encode", "component": EncodeComponent}
+  {"path": "encode", "component": EncodeComponent},
+  {"path": "", "redirectTo": "/encode", "pathMatch": "full"}
 ];
