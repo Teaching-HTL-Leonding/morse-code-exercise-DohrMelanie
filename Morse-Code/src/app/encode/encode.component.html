@@ -1,8 +1,8 @@
 <h2>Encode</h2>
 
-<div>
-  <input type="text" [(ngModel)]="inputText" (keyup)="encode()" placeholder="Enter Text" />
+<div class="enterText">
+  <input type="text" [(ngModel)]="inputText" (keyup)="encode()" placeholder="Enter Text" class="input"/>
   <button (click)="encode()" [disabled]="!shouldEncode()">Encode</button>
 </div>
 
-<input type="text" [(ngModel)]="outputCode" placeholder="Morse Code" readonly/>
+<input type="text" [(ngModel)]="outputCode" placeholder="Morse Code" readonly class="output"/>

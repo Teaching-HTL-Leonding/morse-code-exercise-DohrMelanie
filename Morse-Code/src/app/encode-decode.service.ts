@@ -63,8 +63,7 @@ export class EncodeDecodeService {
       for (let codeChar of codeChars) {
         let index = this.morseCode.indexOf(codeChar);
         if (index === -1) {
-          console.log("Invalid Morse code: " + codeChar);
-          return "";
+          return "Invalid Morse code: " + codeChar;
         }
         outputText += String.fromCharCode('A'.charCodeAt(0) + index);
       }
