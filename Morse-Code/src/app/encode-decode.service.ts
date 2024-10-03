@@ -55,6 +55,21 @@ export class EncodeDecodeService {
   }
 
   decode(inputCode: string): string {
-    return "";
+    let outputText: string = "";
+    inputCode = inputCode.trim();
+    let codeWords = inputCode.split('/');
+    for (let codeWord of codeWords) {
+      let codeChars = codeWord.trim().split(' ');
+      for (let codeChar of codeChars) {
+        let index = this.morseCode.indexOf(codeChar);
+        if (index === -1) {
+          console.log("Invalid Morse code: " + codeChar);
+          return "";
+        }
+        outputText += String.fromCharCode('A'.charCodeAt(0) + index);
+      }
+      outputText += " ";
+    }
+    return outputText;
   }
 }
