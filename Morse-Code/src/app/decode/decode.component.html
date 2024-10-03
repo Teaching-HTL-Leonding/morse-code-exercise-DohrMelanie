@@ -1,6 +1,8 @@
 <h2>Decode</h2>
 
-<input type="text" [(ngModel)]="inputCode" (keyup)="decode()" placeholder="Enter Morse Code" />
+<div>
+  <input type="text" [(ngModel)]="inputCode" (keyup)="decode()" placeholder="Enter Code" />
+  <button (click)="decode()" [disabled]="!shouldDecode()">Encode</button>
+</div>
 
-
-<p>{{outputText()}}</p>
+<input type="text" [(ngModel)]="outputText" placeholder="Decoded Text" readonly/>
