@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { signal, inject } from '@angular/core';
 import { EncodeDecodeService } from '../encode-decode.service';
 import { FormsModule } from '@angular/forms';
+import { PlaySoundService } from '../play-sound.service';
 
 @Component({
   selector: 'app-encode',
@@ -15,6 +16,7 @@ export class EncodeComponent {
   readonly outputCode = signal("");
   readonly shouldEncode = signal(false);
   decodeService = inject(EncodeDecodeService);
+  playService = inject(PlaySoundService);
 
   encode() {
     for (let i = 0; i < this.inputText().length; i++) {
@@ -27,5 +29,8 @@ export class EncodeComponent {
     }
     this.shouldEncode.set(true);
     this.outputCode.set(this.decodeService.encode(this.inputText()));
+  }
+  play() {
+    this.playService.play(this.outputCode());
   }
 }
