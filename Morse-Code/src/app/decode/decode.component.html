@@ -1,0 +1,12 @@
+<h2>Decode</h2>
+
+<div class="enterCode">
+  <input type="text" [(ngModel)]="inputCode" (keyup)="decode()" placeholder="Enter Code" class="input"/>
+  <button (click)="decode()" [disabled]="!shouldDecode()">Encode</button>
+</div>
+
+<input type="text" [(ngModel)]="outputText" placeholder="Decoded Text" readonly class="output"/>
+
+<div *ngIf="errorMessage()" class="error-message" class="error">
+  {{ errorMessage() }}
+</div>

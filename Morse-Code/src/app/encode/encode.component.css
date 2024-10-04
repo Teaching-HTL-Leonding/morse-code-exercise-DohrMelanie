@@ -1,0 +1,33 @@
+.enterText {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.input {
+  font-size: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+.output {
+  font-size: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+button {
+  font-size: 20px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
